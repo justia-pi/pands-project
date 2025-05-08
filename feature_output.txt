@@ -1,0 +1,34 @@
+Iris Dataset Variables Summary
+
+Feature: sepal_length
+  Mean: 5.84
+  Min: 4.30
+  Max: 7.90
+  Standard Deviation: 0.83
+  Median: 5.80
+
+Feature: sepal_width
+  Mean: 3.05
+  Min: 2.00
+  Max: 4.40
+  Standard Deviation: 0.43
+  Median: 3.00
+
+Feature: petal_length
+  Mean: 3.76
+  Min: 1.00
+  Max: 6.90
+  Standard Deviation: 1.76
+  Median: 4.35
+
+Feature: petal_width
+  Mean: 1.20
+  Min: 0.10
+  Max: 2.50
+  Standard Deviation: 0.76
+  Median: 1.30
+
+Species Distribution:
+  Iris-setosa: 50
+  Iris-versicolor: 50
+  Iris-virginica: 50
