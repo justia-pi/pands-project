@@ -6,6 +6,8 @@
  
 import csv
 import numpy as np
+import matplotlib.pyplot as plt
+
 filename = "iris.csv"
 output_filename =  "feature_output.txt"
 
