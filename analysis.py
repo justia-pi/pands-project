@@ -34,7 +34,7 @@ sepal_widths_np = np.array(sepal_widths)
 petal_lengths_np = np.array(petal_lengths)
 petal_widths_np = np.array(petal_widths)
 
-# Calculate features' statistics
+# Calculate features' statistics using dictionaries to store statistics for each feature
 feature_means = {
     "sepal_length": np.mean(sepal_lengths_np),
     "sepal_width": np.mean(sepal_widths_np),
@@ -76,7 +76,7 @@ for s in species: # This loop goes through each element s in the species list.
     if s in species_counts:
         species_counts[s] += 1
     else:
-        species_counts[s] = 1 # Gets the current count of the species s from the species_counts dictionary. 
+        species_counts[s] = 1 # Gets the count of the species s from the species_counts dictionary. 
 
     # Write summary to the output file
 with open(output_filename, "w") as f:
