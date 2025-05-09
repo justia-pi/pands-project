@@ -95,6 +95,50 @@ with open(output_filename, "w") as f:
         f.write(f"  {sp}: {count}\n")
 
 # Creating histogram of each variable (separate histograms)
+feature_names = ["sepal_length", "sepal_width", "petal_length", "petal_width"]
+
+# In order to select all the data for the i feature feature_data[:, i], T transposes the array that columns become rows and rows colum
+feature_data = np.array([sepal_lengths_np, sepal_widths_np, petal_lengths_np, petal_widths_np]).T 
+
+# Enumerate() helps to go through the list and gives 2 things: position of the item in the list and item itself
+for i, feature_name in enumerate(feature_names):
+
+# Plotting hstograms:
+   
+    plt.figure(figsize=(8, 6))  # Create each histogram separately 8 inches wide and 6 inches tall.
+    plt.hist(feature_data[:, i], edgecolor='black', color="red", label=feature_name, alpha=0.7) # feature_data[:, i] all values i colu
+    
+    # Add a title
+    plt.title(f'Histogram of {feature_name}')  
+    
+    # Add labels, legend and grid
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    plt.legend()
+    plt.grid(True)
+
+# Save the histogram of each variable to a png file
+    plt.savefig(f'{feature_name}_histogram.png')  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
