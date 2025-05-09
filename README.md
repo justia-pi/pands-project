@@ -37,17 +37,22 @@ csv
 **Analysis and analysis.py program structure**
 1. Outputs a summary of each variable to a single text file, 
 The dataset has 5 columns which represent  sepal lenght, sepal width, petal lenght, petal width and species' names.
-Program uses list of features names (float type): sepal lenght, sepal width, petal lenght, petal width and species as names of the columns respectively using append and covert the list to NumPy arrays in order to calculate statistics: means, mins, maxs, standard deviation (stds), medians, also to count number of rows of features are of each species. Program creates text file called feature_output.txt with the summary of the dataset's features. 
-2. Saves a histogram of each variable to png files, and 
+Program uses list of features names (float type): sepal lenght, sepal width, petal lenght, petal width and species as names of the columns respectively using append and covert the list to NumPy arrays in order to calculate statistics: means, mins, maxs, standard deviation (stds), medians, also to count number of rows of features are of each species. Program creates text file called feature_output.txt with the summary of the dataset's features.
+
+2. Saves a histogram of each variable to png files. 
 For each of variables (sepal length, sepal width, petal length, and petal width), program creates a histogram using matplotlib.pyplot.hist()
 Program uses matplotlib.pyplot.savefig() to save histogram of each variable.
 
+3. Outputs a scatter plot of each pair of variables. 
+ 
+
 
 **Acknowledgement**
+
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://www.analyticsvidhya.com/blog/2022/06/iris-flowers-classification-using-machine-learning/
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html
 https://www.w3schools.com/python/ref_func_enumerate.asp
-
+https://www.geeksforgeeks.org/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib/
 
 
