@@ -94,6 +94,7 @@ with open(output_filename, "w") as f:
     for sp, count in species_counts.items():
         f.write(f"  {sp}: {count}\n")
 
+# Creating histogram of each variable (separate histograms)
 
 
 
@@ -113,12 +114,5 @@ with open(output_filename, "w") as f:
 
 
 
-    
-    
-    
-    
-    
-    with open(output_filename, "w") as f:
-        f.write(" Iris Dataset Variables Summary\n")
         
         
