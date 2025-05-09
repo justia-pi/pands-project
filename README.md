@@ -20,9 +20,13 @@ The Iris dataset contains measurements for 150 Iris flowers from three different
 Loading and inspecting the Iris dataset from a file iris.csv, in order to do so I imported "csv" library Comma-Separated Value.
 2. feature_output.txt - outputs a summary of each variable
 3. README.md
-4. histograms.png
-5. .gitgnore
-6. Visualisation of the distribution of the features (sepal lenght, sepal width, petal lenght and petal width)
+4. sepal_length_histogram.png
+5. sepal_width_histogram.png
+6. petal_length_histogram.png
+7. petal_width_histogram.png
+8. .gitgnore
+  
+10. Visualisation of the distribution of the features (sepal lenght, sepal width, petal lenght and petal width)
 Exploring the relationships and correlations between different features ussing scatter plots, regression lines plotting, heatmaps and boxplots.
 
 **Dependencies**
@@ -43,6 +47,7 @@ Program uses matplotlib.pyplot.savefig() to save histogram of each variable.
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://www.analyticsvidhya.com/blog/2022/06/iris-flowers-classification-using-machine-learning/
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html
+https://www.w3schools.com/python/ref_func_enumerate.asp
 
 
 
