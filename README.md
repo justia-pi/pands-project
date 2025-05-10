@@ -41,18 +41,31 @@ Program uses list of features names (float type): sepal lenght, sepal width, pet
 
 2. Saves a histogram of each variable to png files. 
 For each of variables (sepal length, sepal width, petal length, and petal width), program creates a histogram using matplotlib.pyplot.hist()
-Program uses matplotlib.pyplot.savefig() to save histogram of each variable.
+Program uses matplotlib.pyplot.savefig() to save histogram of each variable. 
+ **Sepal Length:** The histogram for sepal lenght looks like a normal curve which is centred around 5.8cm, the shortest sepal is 4.3cm, the longest is 7.9cm. The spread of the sepal lenght iis moderate, with the standard deviation of 0.8cm. 
+**Sepal Width** For sepal width (cm) the means is 3.0 with the minimum is 2.0, the maximum is 4.4, the standard deviation is 0.43, and the edian of 3.0. It suggests a balanced spread data with one main peak, which means that there is a typical range of width that most of flowers fall into.  It indicates that this feature is not the best way to differentiate the species. 
+**Petal length** For petal length (cm) the means is 3.75 with the minimum is 1.0, the maximum is 6.9, the standard deviation is 1.7, and the median of 4.35. This indicates a wider spread in petal lenghts. It has 2 peaks which indicates that 2 of the 3 species have much different petal lengths.
+**Petal width** For petal width (cm)the mean is 1.19 with the minimum is 0.1, the maximum is 2.5, the standard deviation is 0.7, and the median of 1.3. It has 3 peaks which can suggest that 3 of the species significantly differ in petal width. 
 
-3. Outputs a scatter plot of each pair of variables. 
- Scatter plots visualise correlation between different variables. 
+4. Outputs a scatter plot of each pair of variables. 
+ Scatter plots visualise correlation between different variables.
+The 
 
 
 **Acknowledgement**
 
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
+
 https://www.analyticsvidhya.com/blog/2022/06/iris-flowers-classification-using-machine-learning/
+
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html
+
 https://www.w3schools.com/python/ref_func_enumerate.asp
+
 https://www.geeksforgeeks.org/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib/
 
+https://en.wikipedia.org/wiki/Simple_linear_regression#Line_fitting
 
+https://www.geeksforgeeks.org/right-skewed-histogram/#what-is-a-histogram
+
+http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html#:~:text=5.8%202.2%20virginica-,Exploratory%20Data%20Analysis,classes%20%2D%2D%20is%20that%20true%3F
