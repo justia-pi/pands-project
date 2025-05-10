@@ -122,6 +122,36 @@ for i, feature_name in enumerate(feature_names):
 # Save the histogram of each variable to a png file
     plt.savefig(f'{feature_name}_histogram.png')  
 
+# Scatter plots of each pair:
+
+# Create a figure and an axis.
+fig, ax = plt.subplots()
+
+# Scatter plot of sepal lenght and sepal width.
+ax.scatter(feature_data[:, 0], feature_data[:, 1], marker=".")
+
+# Labels.
+ax.set_xlabel('sepal_lenght')
+ax.set_ylabel('sepal_width')
+plt.savefig(f'sepal lenght and width_scatter_plot.png')
+
+# Scatter plot of sepal lenght and petal width.
+ax.scatter(feature_data[:, 0], feature_data[:, 3], marker='.')
+
+# Labels.
+ax.set_xlabel('sepal_lenght')
+ax.set_ylabel('petal_width')
+plt.savefig(f'sepal lenght and petal width_scatter_plot.png')
+
+
+# Scatter plot of petal lenght and sepal width.
+ax.scatter(feature_data[:, 3], feature_data[:, 1], marker='.')
+
+# Labels.
+ax.set_xlabel('petal_lenght')
+ax.set_ylabel('sepal_width')
+plt.savefig(f'petal lenght and sepal width_scatter_plot.png')
+
 
 
 
