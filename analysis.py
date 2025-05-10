@@ -2,6 +2,7 @@
 # 1. Program outputs a summary of each variable to a signle file.
 # 2. Saves a histogram of each variable to png files.
 # 3. Outputs scatter plot of each pair of variable.
+# 4. Regression line - correlation between varibales: petal length and petal width
 # By Justyna Pinkowska
  
 import csv
