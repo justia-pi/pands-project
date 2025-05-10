@@ -44,7 +44,7 @@ For each of variables (sepal length, sepal width, petal length, and petal width)
 Program uses matplotlib.pyplot.savefig() to save histogram of each variable.
 
 3. Outputs a scatter plot of each pair of variables. 
- 
+ Scatter plots visualise correlation between different variables. 
 
 
 **Acknowledgement**
