@@ -107,9 +107,9 @@ feature_data = np.array([sepal_lengths_np, sepal_widths_np, petal_lengths_np, pe
 for i, feature_name in enumerate(feature_names):
 
 # Plotting hstograms:
-   
-    plt.figure(figsize=(8, 6))  # Create each histogram separately 8 inches wide and 6 inches tall.
-    plt.hist(feature_data[:, i], edgecolor='black', color="red", label=feature_name, alpha=0.7) # feature_data[:, i] all values i colu
+# Creates each histogram separately 8 inches wide and 6 inches tall.  
+    plt.figure(figsize=(8, 6))  
+    plt.hist(feature_data[:, i], edgecolor='black', color="red", label=feature_name, alpha=0.7) # feature_data[:, i] all values i column.
     
     # Add a title
     plt.title(f'Histogram of {feature_name}')  
@@ -134,6 +134,8 @@ ax.scatter(feature_data[:, 0], feature_data[:, 1], marker=".")
 # Labels.
 ax.set_xlabel('sepal_lenght')
 ax.set_ylabel('sepal_width')
+
+# Save the scatter plot of each variable to a png file
 plt.savefig(f'sepal lenght and width_scatter_plot.png')
 
 # Scatter plot of sepal lenght and petal width.
@@ -142,6 +144,8 @@ ax.scatter(feature_data[:, 0], feature_data[:, 3], marker='.')
 # Labels.
 ax.set_xlabel('sepal_lenght')
 ax.set_ylabel('petal_width')
+
+# Save the scatter plot of each variable to a png file
 plt.savefig(f'sepal lenght and petal width_scatter_plot.png')
 
 
@@ -151,9 +155,38 @@ ax.scatter(feature_data[:, 3], feature_data[:, 1], marker='.')
 # Labels.
 ax.set_xlabel('petal_lenght')
 ax.set_ylabel('sepal_width')
+
+# Save the scatter plot of each variable to a png file
 plt.savefig(f'petal lenght and sepal width_scatter_plot.png')
 
+# Create a figure and axis
+fig, ax = plt.subplots()
 
+# Scatter plot of petal length and petal width.
+ax.scatter(feature_data[:, 2], feature_data[:, 3], marker='.' )
+
+# Labels.
+ax.set_xlabel('petal_length')
+ax.set_ylabel('petal_width')
+
+# Save the scatter plot of each variable to a png file
+plt.savefig(f'petal length and petal width_scatter_plot.png')
+
+# Plotting regression line.
+
+# Use polyfit to fit a line to the data.
+m, c = np.polyfit(feature_data[:, 2], feature_data[:, 3], 1)
+
+ax.plot(feature_data[:, 2], m * feature_data[:, 2] + c, color = 'red', label = 'Regression line')
+
+# Title.
+ax.set_title(f'y = {m:.2f}x + {c:.2f}', color = 'red')
+
+# Legend.
+ax.legend()
+
+# Saves scatter plot and regression line.
+plt.savefig(f'petal length and petal width_scatter_plot.png')
 
 
 
