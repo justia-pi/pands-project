@@ -127,64 +127,75 @@ for i, feature_name in enumerate(feature_names):
 
 # Create a figure and an axis.
 fig, ax = plt.subplots()
+species = ['setosa', 'versicolor', 'virginica']
+# First rows 50 is setosa, 51-100 is versicolor and 101-150 is virginica. 
+species_names = np.repeat(species, 50) 
+color= {"setosa": "red", "versicolor": "green", "virginica": "yellow"}
+species_colors = [color[name] for name in species_names]
 
-# Scatter plot of sepal lenght and sepal width.
-ax.scatter(feature_data[:, 0], feature_data[:, 1], marker=".")
-
+# Scatter plot of sepal length and sepal width.
+ax.scatter(feature_data[:, 0], feature_data[:, 1], c=species_colors, marker=".")
 # Labels.
-ax.set_xlabel('sepal_lenght')
+ax.set_xlabel('sepal_length')
 ax.set_ylabel('sepal_width')
+# Save scatter plot.
+plt.savefig(f'sepal length and width_scatter_plot.png')
 
-# Save the scatter plot of each variable to a png file
-plt.savefig(f'sepal lenght and width_scatter_plot.png')
 
-# Scatter plot of sepal lenght and petal width.
-ax.scatter(feature_data[:, 0], feature_data[:, 3], marker='.')
-
+# Scatter plot of sepal length and petal length.
+ax.scatter(feature_data[:, 0], feature_data[:, 2], c=species_colors, marker=".")
 # Labels.
-ax.set_xlabel('sepal_lenght')
+ax.set_xlabel('sepal_length')
+ax.set_ylabel('petal_length')
+# Save scatter plot.
+plt.savefig(f'sepal length and petal length_scatter_plot.png')
+
+
+# Scatter plot of sepal length and petal width.
+ax.scatter(feature_data[:, 0], feature_data[:, 3], c=species_colors, marker=".")
+# Labels.
+ax.set_xlabel('sepal_length')
 ax.set_ylabel('petal_width')
+# Save scatter plot.
+plt.savefig(f'sepal length and petal width_scatter_plot.png')
 
-# Save the scatter plot of each variable to a png file
-plt.savefig(f'sepal lenght and petal width_scatter_plot.png')
 
-
-# Scatter plot of petal lenght and sepal width.
-ax.scatter(feature_data[:, 3], feature_data[:, 1], marker='.')
-
+# Scatter plot of sepal width and petal length.
+ax.scatter(feature_data[:, 1], feature_data[:, 2], c=species_colors, marker=".")
 # Labels.
-ax.set_xlabel('petal_lenght')
-ax.set_ylabel('sepal_width')
+ax.set_xlabel('sepal_width')
+ax.set_ylabel('petal_length')
+# Save scatter plot.
+plt.savefig(f'sepal width and petal length_scatter_plot.png')
 
-# Save the scatter plot of each variable to a png file
-plt.savefig(f'petal lenght and sepal width_scatter_plot.png')
+# Scatter plot of sepal width and petal width.
+ax.scatter(feature_data[:, 1], feature_data[:, 3], c=species_colors, marker=".")
+# Labels.
+ax.set_xlabel('sepal_width')
+ax.set_ylabel('petal_width')
+# Save scatter plot.
+plt.savefig(f'sepal width and petal width_scatter_plot.png')
 
-# Create a figure and axis
+
+# Create a figure and axis.
 fig, ax = plt.subplots()
-
 # Scatter plot of petal length and petal width.
-ax.scatter(feature_data[:, 2], feature_data[:, 3], marker='.' )
-
+ax.scatter(feature_data[:, 2], feature_data[:, 3], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('petal_length')
 ax.set_ylabel('petal_width')
-
-# Save the scatter plot of each variable to a png file
+# Save scatter plot.
 plt.savefig(f'petal length and petal width_scatter_plot.png')
 
-# Plotting regression line.
 
+# Plotting regression line.https://en.wikipedia.org/wiki/Simple_linear_regression#Line_fitting
 # Use polyfit to fit a line to the data.
 m, c = np.polyfit(feature_data[:, 2], feature_data[:, 3], 1)
-
 ax.plot(feature_data[:, 2], m * feature_data[:, 2] + c, color = 'red', label = 'Regression line')
-
 # Title.
 ax.set_title(f'y = {m:.2f}x + {c:.2f}', color = 'red')
-
 # Legend.
 ax.legend()
-
 # Saves scatter plot and regression line.
 plt.savefig(f'petal length and petal width_scatter_plot.png')
 
