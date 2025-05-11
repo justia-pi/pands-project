@@ -200,6 +200,18 @@ ax.legend()
 plt.savefig(f'petal length and petal width_scatter_plot.png')
 
 
+# Boxplot of petal lenght for each species.
+
+set = feature_data[:50, 2]
+set_mean = np.mean(set)
+set_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
+# Create figure, axis.
+fig, ax = plt.subplots()
+# Create boxplot of Setosa.
+ax.boxplot(set)
+# Add title.
+ax.set_title("Boxplot of Setosa Data")
+plt.savefig(f'boxplot_setosa.png')
 
 
 
