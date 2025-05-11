@@ -140,6 +140,9 @@ ax.scatter(feature_data[:, 0], feature_data[:, 1], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('sepal_length')
 ax.set_ylabel('sepal_width')
+# Create a legend
+handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
+ax.legend(handles=handles, labels=color.keys())
 # Save scatter plot.
 plt.savefig(f'sepal length and width_scatter_plot.png')
 
@@ -149,6 +152,9 @@ ax.scatter(feature_data[:, 0], feature_data[:, 2], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('sepal_length')
 ax.set_ylabel('petal_length')
+# Create a legend
+handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
+ax.legend(handles=handles, labels=color.keys())
 # Save scatter plot.
 plt.savefig(f'sepal length and petal length_scatter_plot.png')
 
@@ -158,6 +164,9 @@ ax.scatter(feature_data[:, 0], feature_data[:, 3], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('sepal_length')
 ax.set_ylabel('petal_width')
+# Create a legend
+handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
+ax.legend(handles=handles, labels=color.keys())
 # Save scatter plot.
 plt.savefig(f'sepal length and petal width_scatter_plot.png')
 
@@ -167,6 +176,9 @@ ax.scatter(feature_data[:, 1], feature_data[:, 2], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('sepal_width')
 ax.set_ylabel('petal_length')
+# Create a legend
+handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
+ax.legend(handles=handles, labels=color.keys())
 # Save scatter plot.
 plt.savefig(f'sepal width and petal length_scatter_plot.png')
 
@@ -175,6 +187,9 @@ ax.scatter(feature_data[:, 1], feature_data[:, 3], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('sepal_width')
 ax.set_ylabel('petal_width')
+# Create a legend
+handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
+ax.legend(handles=handles, labels=color.keys())
 # Save scatter plot.
 plt.savefig(f'sepal width and petal width_scatter_plot.png')
 
@@ -186,6 +201,9 @@ ax.scatter(feature_data[:, 2], feature_data[:, 3], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('petal_length')
 ax.set_ylabel('petal_width')
+# Create a legend
+handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
+ax.legend(handles=handles, labels=color.keys())
 # Save scatter plot.
 plt.savefig(f'petal length and petal width_scatter_plot.png')
 
