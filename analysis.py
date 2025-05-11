@@ -129,7 +129,8 @@ for i, feature_name in enumerate(feature_names):
 # Create a figure and an axis.
 fig, ax = plt.subplots()
 species = ['setosa', 'versicolor', 'virginica']
-# First rows 50 is setosa, 51-100 is versicolor and 101-150 is virginica. 
+
+# First rows 50 is Setosa, 51-100 is Versicolor and 101-150 is Virginica. 
 species_names = np.repeat(species, 50) 
 color = {"setosa": "red", "versicolor": "green", "virginica": "yellow"}
 species_colors = [color[name] for name in species_names]
