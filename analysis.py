@@ -202,6 +202,7 @@ plt.savefig(f'petal length and petal width_scatter_plot.png')
 
 # Boxplot of petal lenght for each species.
 
+# Setosa
 set = feature_data[:50, 2]
 set_mean = np.mean(set)
 set_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
@@ -214,6 +215,29 @@ ax.set_title("Boxplot of Setosa Data")
 plt.savefig(f'boxplot_setosa.png')
 
 
+# Versicolor
+ver = feature_data[51:100, 2]
+ver_mean = np.mean(set)
+ver_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
+# Create figure, axis.
+fig, ax = plt.subplots()
+# Create boxplot Versicolor.
+ax.boxplot(ver)
+# Add title.
+ax.set_title("Boxplot of Versicolor Data")
+plt.savefig(f'boxplot_versicolor.png')
+
+# Virginica
+vir = feature_data[101:150, 2]
+vir_mean = np.mean(set)
+vir_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
+# Create figure, axis.
+fig, ax = plt.subplots()
+# Create boxplot Virginica
+ax.boxplot(vir)
+# Add title.
+ax.set_title("Boxplot of Virginica Data")
+plt.savefig(f'boxplot_virginica.png')
 
 
 
