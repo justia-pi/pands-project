@@ -65,6 +65,7 @@ Scatter plots visualise correlation between different variables.
 **Sepal width and Petal width** - the scatter plot shows a weak correlation, with most of the data points overlapping. 
 
 5. Regression line for Petal length nad petal width to visualise the positive correlation between these two features.
+6. Boxplot of petal length for each species: Boxplots visualise and summarise sets of data, shows the box and whiskers. Setosa has the smallest range of petal length from all 3 flower species, which indicates that the petal length of the Satosa flowers is similar. 
 
 **Acknowledgement**
 
@@ -83,3 +84,7 @@ https://en.wikipedia.org/wiki/Simple_linear_regression#Line_fitting
 https://www.geeksforgeeks.org/right-skewed-histogram/#what-is-a-histogram
 
 http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html#:~:text=5.8%202.2%20virginica-,Exploratory%20Data%20Analysis,classes%20%2D%2D%20is%20that%20true%3F
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
+
+https://www.youtube.com/watch?v=KwqWuRvt7XQ
