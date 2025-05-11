@@ -2,7 +2,8 @@
 # 1. Program outputs a summary of each variable to a signle file.
 # 2. Saves a histogram of each variable to png files.
 # 3. Outputs scatter plot of each pair of variable.
-# 4. Regression line - correlation between varibales: petal length and petal width
+# 4. Regression line - correlation between varibales: petal length and petal width.
+# 5. Boxplots of petal length for each species.
 # By Justyna Pinkowska
  
 import csv
@@ -13,14 +14,14 @@ filename = "iris.csv"
 output_filename =  "feature_output.txt"
 
 
-# Lists to store data for each column
+# Lists to store data for each column.
 sepal_lengths = []
 sepal_widths = []
 petal_lengths = []
 petal_widths = []
 species = []
 
-# Reading Iris dataset
+# Reading Iris dataset.
 with open(filename, "rt") as csvFile: 
     csvReader = csv.reader(csvFile, delimiter=',')
     for row in csvReader:
@@ -31,13 +32,13 @@ with open(filename, "rt") as csvFile:
             petal_widths.append(float(row[3]))
             species.append(row[4])
   
-# Convert numerical lists to NumPy arrays for calculations
+# Convert numerical lists to NumPy arrays for calculations.
 sepal_lengths_np = np.array(sepal_lengths)
 sepal_widths_np = np.array(sepal_widths)
 petal_lengths_np = np.array(petal_lengths)
 petal_widths_np = np.array(petal_widths)
 
-# Calculate features' statistics using dictionaries to store statistics for each feature
+# Calculate features' statistics using dictionaries to store statistics for each feature.
 feature_means = {
     "sepal_length": np.mean(sepal_lengths_np),
     "sepal_width": np.mean(sepal_widths_np),
@@ -73,7 +74,7 @@ feature_medians = {
     "petal_width": np.median(petal_widths_np),
 }
 
-# Calculate species counts
+# Calculate species counts.
 species_counts = {}
 for s in species: # This loop goes through each element s in the species list. 
     if s in species_counts:
@@ -81,7 +82,7 @@ for s in species: # This loop goes through each element s in the species list.
     else:
         species_counts[s] = 1 # Gets the count of the species s from the species_counts dictionary. 
 
-    # Write summary to the output file
+    # Write summary to the output file.
 with open(output_filename, "w") as f:
     f.write("Iris Dataset Variables Summary\n\n")
 
@@ -97,13 +98,13 @@ with open(output_filename, "w") as f:
     for sp, count in species_counts.items():
         f.write(f"  {sp}: {count}\n")
 
-# Creating histogram of each variable (separate histograms)
+# Creating histogram of each variable (separate histograms).
 feature_names = ["sepal_length", "sepal_width", "petal_length", "petal_width"]
 
-# In order to select all the data for the i feature feature_data[:, i], T transposes the array that columns become rows and rows colum
+# In order to select all the data for the i feature feature_data[:, i], T transposes the array that columns become rows and rows colum.
 feature_data = np.array([sepal_lengths_np, sepal_widths_np, petal_lengths_np, petal_widths_np]).T 
 
-# Enumerate() helps to go through the list and gives 2 things: position of the item in the list and item itself
+# Enumerate() helps to go through the list and gives 2 things: position of the item in the list and item itself.
 for i, feature_name in enumerate(feature_names):
 
 # Plotting hstograms:
@@ -111,16 +112,16 @@ for i, feature_name in enumerate(feature_names):
     plt.figure(figsize=(8, 6))  
     plt.hist(feature_data[:, i], edgecolor='black', color="red", label=feature_name, alpha=0.7) # feature_data[:, i] all values i column.
     
-    # Add a title
+    # Add a title.
     plt.title(f'Histogram of {feature_name}')  
     
-    # Add labels, legend and grid
+    # Add labels, legend and grid.
     plt.xlabel('Value')
     plt.ylabel('Frequency')
     plt.legend()
     plt.grid(True)
 
-# Save the histogram of each variable to a png file
+# Save the histogram of each variable to a png file.
     plt.savefig(f'{feature_name}_histogram.png')  
 
 # Scatter plots of each pair:
@@ -130,7 +131,7 @@ fig, ax = plt.subplots()
 species = ['setosa', 'versicolor', 'virginica']
 # First rows 50 is setosa, 51-100 is versicolor and 101-150 is virginica. 
 species_names = np.repeat(species, 50) 
-color= {"setosa": "red", "versicolor": "green", "virginica": "yellow"}
+color = {"setosa": "red", "versicolor": "green", "virginica": "yellow"}
 species_colors = [color[name] for name in species_names]
 
 # Scatter plot of sepal length and sepal width.
@@ -200,9 +201,9 @@ ax.legend()
 plt.savefig(f'petal length and petal width_scatter_plot.png')
 
 
-# Boxplot of petal lenght for each species.
+# Boxplots of petal length for each species:
 
-# Setosa
+# Setosa.
 set = feature_data[:50, 2]
 set_mean = np.mean(set)
 set_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
@@ -215,7 +216,7 @@ ax.set_title("Boxplot of Setosa Data")
 plt.savefig(f'boxplot_setosa.png')
 
 
-# Versicolor
+# Versicolor.
 ver = feature_data[51:100, 2]
 ver_mean = np.mean(set)
 ver_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
@@ -227,7 +228,7 @@ ax.boxplot(ver)
 ax.set_title("Boxplot of Versicolor Data")
 plt.savefig(f'boxplot_versicolor.png')
 
-# Virginica
+# Virginica.
 vir = feature_data[101:150, 2]
 vir_mean = np.mean(set)
 vir_quant = np.quantile(set, [0.25, 0.5, 0.75], axis=0)
