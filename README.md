@@ -88,3 +88,5 @@ http://www.lac.inpe.br/~rafael.santos/Docs/CAP394/WholeStory-Iris.html#:~:text=5
 https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
 
 https://www.youtube.com/watch?v=KwqWuRvt7XQ
+
+https://matplotlib.org/stable/users/explain/axes/legend_guide.html
