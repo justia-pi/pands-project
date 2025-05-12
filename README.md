@@ -90,3 +90,7 @@ https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
 https://www.youtube.com/watch?v=KwqWuRvt7XQ
 
 https://matplotlib.org/stable/users/explain/axes/legend_guide.html
+
+https://stackoverflow.com/questions/22483588/how-to-plot-multiple-dataframes-in-subplots/62689413#62689413
+
+https://stackoverflow.com/questions/67033128/matplotlib-order-of-legend-entries
