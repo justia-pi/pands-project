@@ -201,9 +201,9 @@ ax.scatter(feature_data[:, 2], feature_data[:, 3], c=species_colors, marker=".")
 # Labels.
 ax.set_xlabel('petal_length')
 ax.set_ylabel('petal_width')
-# Create a legend
+# Create a legend https://matplotlib.org/stable/users/explain/axes/legend_guide.html
 handles = [plt.plot([], [], marker=".", linestyle="", color=color[name], label=name)[0] for name in color]
-ax.legend(handles=handles, labels=color.keys())
+ax.legend(handles=handles, labels=color.keys()) 
 # Save scatter plot.
 plt.savefig(f'petal length and petal width_scatter_plot.png')
 
